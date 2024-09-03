@@ -35,7 +35,7 @@ O intuito é que possamos cadastrar os parceiros que temos integrados em nossas 
 - [ ] Iniciar com Vite
 - [ ] Testes unitários
 - [ ] Deploy do projeto no GitHub Pages
-- [ ] Deploy no Vercel
+- [x] Deploy no Vercel
 
 ### Página de Login
 
