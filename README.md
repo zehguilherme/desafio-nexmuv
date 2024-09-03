@@ -32,10 +32,14 @@ O intuito é que possamos cadastrar os parceiros que temos integrados em nossas 
 
 - [ ] Deverá ser implementado um projeto com micro front-ends separados por domínios ou contextos de uso, permitindo assim, que diferentes times cuidem dessas funcionalidades de forma independente
 - [ ] Preparar projeto em contêiner para que o time de infra consiga subir num cloud, exemplo ECS da AWS
+- [ ] Iniciar com Vite
+- [ ] Testes unitários
+- [ ] Deploy do projeto no GitHub Pages
+- [ ] Deploy no Vercel
 
 ### Página de Login
 
-- [ ] Criação do formulário (Campos **Usuário**, **Senha** e **Continuar Logado**)
+- [x] Criação do formulário (Campos **Usuário**, **Senha** e **Continuar Logado**)
 - [ ] Manter usuário conectado (Se o checkbox na tela de login for marcado deve salvar o usuário no cookie, se não, deve salvar no local storage)
 - [ ] Ao entrar na página, realizar a  busca do cookie contendo o nome do usuário
 - [ ] Ao clicar em entrar não precisa autenticar, só redirecionar para a página inicial
