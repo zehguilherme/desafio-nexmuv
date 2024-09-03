@@ -11,6 +11,7 @@ O intuito é que possamos cadastrar os parceiros que temos integrados em nossas 
 - [ReactJS](https://react.dev/) - Biblioteca para construção de interfaces usando componentes
 - [TypeScript](https://www.typescriptlang.org/) - Conjunto de pacotes que adiciona tipagem estática à linguagem JavaScript
 - [React Router](https://reactrouter.com/en/main) - Gerenciamento de rotas da aplicação
+- [React Bootstrap](https://react-bootstrap.netlify.app)
 
 ### Back-end
 
@@ -29,32 +30,27 @@ O intuito é que possamos cadastrar os parceiros que temos integrados em nossas 
 
 ## TODO
 
+- [ ] Deverá ser implementado um projeto com micro front-ends separados por domínios ou contextos de uso, permitindo assim, que diferentes times cuidem dessas funcionalidades de forma independente
+- [ ] Preparar projeto em contêiner para que o time de infra consiga subir num cloud, exemplo ECS da AWS
+
 ### Página de Login
 
-Com opção de digitar **usuário** e **senha**, ao clicar em entrar não precisa autenticar, só redirecionar para a página inicial.
-
-- [ ] Criação do formulário
-  - Campos **Usuário**, **Senha** e **Permanecer Logado**
-- [ ] Manter usuário conectado
-  - Se o checkbox na tela de login for marcado deve salvar o usuário no cookie, se não, deve salvar no local storage
+- [ ] Criação do formulário (Campos **Usuário**, **Senha** e **Continuar Logado**)
+- [ ] Manter usuário conectado (Se o checkbox na tela de login for marcado deve salvar o usuário no cookie, se não, deve salvar no local storage)
 - [ ] Ao entrar na página, realizar a  busca do cookie contendo o nome do usuário
+- [ ] Ao clicar em entrar não precisa autenticar, só redirecionar para a página inicial
 
 ### Página Inicial
 
 Layout da aplicação com um menu e os itens.
 
 - [ ] Cadastrar parceiro
-- [ ] Listar todos os parceiros
-  - Tabela com paginação e na última coluna ações para editar/deletar cada registro
-- [ ] Sobre a aplicação
-  - Página com um texto falando como o projeto foi feito, sentimento, tecnologia usada, para que serve o sistema, etc
-- [ ] Sair
-  - Direciona para a página de **Login**
+- [ ] Listar todos os parceiros (Tabela com paginação e na última coluna ações para editar/deletar cada registro)
+- [ ] Sobre a aplicação (Página com um texto falando como o projeto foi feito, sentimento, tecnologia usada, para que serve o sistema, etc)
+- [ ] Sair (Direciona para a página de **Login**)
 - [ ] Cadastrar empresa externa
-- [ ] Listar as empresas externas
-  - Tabela com paginação do lado do front e na última coluna ações para editar/deletar cada registro
-- [ ] Compartilhar dados da tabela
-  - Em relação a paginação, deve existir um mecanismo que ao compartilhar o link com outra pessoa, a pessoa deve ser redirecionada para a página específica da tabela. Exemplo: se ao compartilhar o link a paginação avançou até a página 3, ao entrar no link deve estar na página 3. Caso o usuário esteja logado, caso não, após o login ele deve ser redirecionado.
+- [ ] Listar as empresas externas (Tabela com paginação do lado do front e na última coluna ações para editar/deletar cada registro)
+- [ ] Compartilhar dados da tabela (Em relação a paginação, deve existir um mecanismo que ao compartilhar o link com outra pessoa, a pessoa deve ser redirecionada para a página específica da tabela. Exemplo: se ao compartilhar o link a paginação avançou até a página 3, ao entrar no link deve estar na página 3. Caso o usuário esteja logado, caso não, após o login ele deve ser redirecionado.)
 
 ## 🚀 Começando
 
