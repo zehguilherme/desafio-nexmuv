@@ -2,7 +2,7 @@
 
 ## 💬 Descrição
 
-O intuito é que possamos cadastrar os parceiros que temos integrados em nossas aplicações, com informações dele, onde usamos e quais clientes atendemos.
+O intuito é que possamos cadastrar os parceiros que temos integrados em nossas aplicações, com informações deles, onde usamos e quais clientes atendemos.
 
 ## 🚀 Tecnologias
 
@@ -28,7 +28,7 @@ O intuito é que possamos cadastrar os parceiros que temos integrados em nossas 
 - Atualizar um parceiro - `PUT - /:id`
 - Deletar um parceiro - `DELETE - /:id`
 
-## TODO
+## TODO / TASKS
 
 - [ ] Deverá ser implementado um projeto com micro front-ends separados por domínios ou contextos de uso, permitindo assim, que diferentes times cuidem dessas funcionalidades de forma independente
 - [ ] Preparar projeto em contêiner para que o time de infra consiga subir num cloud, exemplo ECS da AWS
@@ -48,12 +48,24 @@ O intuito é que possamos cadastrar os parceiros que temos integrados em nossas 
 
 Layout da aplicação com um menu e os itens.
 
+#### Parceiro
+
 - [ ] Cadastrar parceiro
 - [ ] Listar todos os parceiros (Tabela com paginação e na última coluna ações para editar/deletar cada registro)
-- [ ] Sobre a aplicação (Página com um texto falando como o projeto foi feito, sentimento, tecnologia usada, para que serve o sistema, etc)
-- [ ] Sair (Direciona para a página de **Login**)
+- [ ] Editar parceiro
+- [ ] Deletar parceiro
+
+#### Empresa Externa
+
 - [ ] Cadastrar empresa externa
 - [ ] Listar as empresas externas (Tabela com paginação do lado do front e na última coluna ações para editar/deletar cada registro)
+- [ ] Editar empresa externa
+- [ ] Deletar empresa externa
+
+---
+
+- [ ] Sobre a aplicação (Página com um texto falando como o projeto foi feito, sentimento, tecnologia usada, para que serve o sistema, etc)
+- [ ] Sair (Direciona para a página de **Login**)
 - [ ] Compartilhar dados da tabela (Em relação a paginação, deve existir um mecanismo que ao compartilhar o link com outra pessoa, a pessoa deve ser redirecionada para a página específica da tabela. Exemplo: se ao compartilhar o link a paginação avançou até a página 3, ao entrar no link deve estar na página 3. Caso o usuário esteja logado, caso não, após o login ele deve ser redirecionado.)
 
 ## 🚀 Começando
