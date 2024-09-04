@@ -14,15 +14,12 @@ export function Home() {
 
   async function fetchPartners() {
     try {
-      const response = await fetch(
-        `https://644060ba792fe886a88de1b9.mockapi.io/v1/test/partners`,
-        {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await fetch(`${import.meta.env.VITE_PARTNERS_API_URL}`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
       const partners = await response.json();
 
@@ -33,7 +30,7 @@ export function Home() {
   async function fetchExternalCompanies() {
     try {
       const response = await fetch(
-        `https://655cf25525b76d9884fe3153.mockapi.io/v1/external-companies`,
+        `${import.meta.env.VITE_EXTERNAL_COMPANIES_API_URL}`,
         {
           method: "GET",
           headers: {
