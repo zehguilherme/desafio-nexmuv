@@ -28,14 +28,14 @@ O intuito é que possamos cadastrar os parceiros que temos integrados em nossas 
 - Atualizar um parceiro - `PUT - /:id`
 - Deletar um parceiro - `DELETE - /:id`
 
-## TODO / TASKS
+## ✅ TODO / TASKS
 
 - [ ] Deverá ser implementado um projeto com micro front-ends separados por domínios ou contextos de uso, permitindo assim, que diferentes times cuidem dessas funcionalidades de forma independente
 - [ ] Preparar projeto em contêiner para que o time de infra consiga subir num cloud, exemplo ECS da AWS
 - [x] Iniciar com Vite
 - [ ] Testes unitários
 - [ ] Deploy do projeto no GitHub Pages
-- [x] Deploy no Vercel
+- [x] Deploy na Vercel
 
 ### Página de Login
 
@@ -61,7 +61,7 @@ Layout da aplicação com um menu e os itens.
 
 - [ ] Cadastrar empresa externa
 - [ ] Listar as empresas externas (Tabela com paginação do lado do front e na última coluna ações para editar/deletar cada registro)
-  - [ ] Tabela
+  - [x] Tabela
   - [ ] Paginação na tabela
   - [ ] Editar empresa externa
   - [ ] Deletar empresa externa

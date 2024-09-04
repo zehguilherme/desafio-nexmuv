@@ -4,9 +4,13 @@ import { Link } from "react-router-dom";
 import { Header } from "../components/Header";
 import { useEffect, useState } from "react";
 import { PartnersProps } from "../schemas/PartnersProps";
+import { ExternalCompanieProps } from "../schemas/ExternalCompanieProps";
 
 export function Home() {
   const [partners, setPartners] = useState(Array<PartnersProps>);
+  const [externalCompanies, setExternalCompanies] = useState(
+    Array<ExternalCompanieProps>
+  );
 
   async function fetchPartners() {
     try {
@@ -26,8 +30,28 @@ export function Home() {
     } catch (error) {}
   }
 
+  async function fetchExternalCompanies() {
+    try {
+      const response = await fetch(
+        `https://655cf25525b76d9884fe3153.mockapi.io/v1/external-companies`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      const externalCompanies = await response.json();
+
+      setExternalCompanies(externalCompanies);
+    } catch (error) {}
+  }
+
   useEffect(() => {
     fetchPartners();
+
+    fetchExternalCompanies();
   }, []);
 
   return (
@@ -36,10 +60,12 @@ export function Home() {
 
       <Container className="py-4">
         <Row>
-          <Col>
+          <Col lg={6} className="mb-3">
             <Link to={"#"} className="btn btn-primary mb-3">
               Cadastrar Parceiro
             </Link>
+
+            <h1 className="h2 mb-3">Parceiros</h1>
 
             <Table striped bordered hover responsive className="align-middle">
               <thead>
@@ -82,7 +108,53 @@ export function Home() {
             </Table>
           </Col>
 
-          <Col></Col>
+          <Col lg={6}>
+            <Link to={"#"} className="btn btn-primary mb-3">
+              Cadastrar Empresa Externa
+            </Link>
+
+            <h1 className="h2 mb-3">Empresas Externas</h1>
+
+            <Table striped bordered hover responsive className="align-middle">
+              <thead>
+                <tr>
+                  <th>Nome</th>
+
+                  <th>Número Colaboradores</th>
+
+                  <th>Ativa</th>
+
+                  <th></th>
+
+                  <th></th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {externalCompanies.map((externalCompanie) => (
+                  <tr key={externalCompanie.id}>
+                    <td>{externalCompanie.companyName}</td>
+
+                    <td>{externalCompanie.collaboratorsCount}</td>
+
+                    <td>{externalCompanie.isActive ? "Sim" : "Não"}</td>
+
+                    <td>
+                      <Button variant="secondary" type="button">
+                        Editar
+                      </Button>
+                    </td>
+
+                    <td>
+                      <Button variant="danger" type="button">
+                        Excluir
+                      </Button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+          </Col>
         </Row>
       </Container>
     </>
