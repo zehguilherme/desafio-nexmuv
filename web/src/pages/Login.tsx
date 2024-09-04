@@ -1,6 +1,6 @@
 import { Stack } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import { Link } from "react-router-dom";
 
 export function Login() {
   return (
@@ -27,15 +27,9 @@ export function Login() {
           <Form.Check type="checkbox" label="Continuar logado" />
         </Form.Group>
 
-        <Button
-          as="a"
-          href="/"
-          variant="primary"
-          className="w-100"
-          type="submit"
-        >
+        <Link to={"/"} className="w-100 btn btn-primary">
           Entrar
-        </Button>
+        </Link>
       </Form>
     </Stack>
   );
