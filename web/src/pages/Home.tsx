@@ -1,5 +1,6 @@
 import { Button, Col, Container, Row, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 import { Header } from "../components/Header";
 import { useEffect, useState } from "react";
@@ -12,6 +13,18 @@ export function Home() {
     Array<ExternalCompanieProps>
   );
 
+  function partnersLoadedError() {
+    return toast(`Erro ao carregar os Parceiros!`, {
+      type: "error",
+    });
+  }
+
+  function externalCompaniesLoadedError() {
+    return toast(`Erro ao carregar as Empresas Externas!`, {
+      type: "error",
+    });
+  }
+
   async function fetchPartners() {
     try {
       const response = await fetch(`${import.meta.env.VITE_PARTNERS_API_URL}`, {
@@ -21,10 +34,12 @@ export function Home() {
         },
       });
 
-      const partners = await response.json();
+      const partners: Array<PartnersProps> = await response.json();
 
       setPartners(partners);
-    } catch (error) {}
+    } catch {
+      partnersLoadedError();
+    }
   }
 
   async function fetchExternalCompanies() {
@@ -39,10 +54,13 @@ export function Home() {
         }
       );
 
-      const externalCompanies = await response.json();
+      const externalCompanies: Array<ExternalCompanieProps> =
+        await response.json();
 
       setExternalCompanies(externalCompanies);
-    } catch (error) {}
+    } catch {
+      externalCompaniesLoadedError();
+    }
   }
 
   useEffect(() => {
@@ -58,7 +76,7 @@ export function Home() {
       <Container className="py-4">
         <Row>
           <Col lg={6} className="mb-3">
-            <Link to={"#"} className="btn btn-primary mb-3">
+            <Link to={"#"} className="btn btn-primary mb-4">
               Cadastrar Parceiro
             </Link>
 
@@ -106,7 +124,7 @@ export function Home() {
           </Col>
 
           <Col lg={6}>
-            <Link to={"#"} className="btn btn-primary mb-3">
+            <Link to={"#"} className="btn btn-primary mb-4">
               Cadastrar Empresa Externa
             </Link>
 
