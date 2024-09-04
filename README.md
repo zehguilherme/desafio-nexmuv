@@ -52,20 +52,24 @@ Layout da aplicação com um menu e os itens.
 
 - [ ] Cadastrar parceiro
 - [ ] Listar todos os parceiros (Tabela com paginação e na última coluna ações para editar/deletar cada registro)
-- [ ] Editar parceiro
-- [ ] Deletar parceiro
+  - [x] Tabela
+  - [ ] Paginação na tabela
+  - [ ] Editar parceiro
+  - [ ] Deletar parceiro
 
 #### Empresa Externa
 
 - [ ] Cadastrar empresa externa
 - [ ] Listar as empresas externas (Tabela com paginação do lado do front e na última coluna ações para editar/deletar cada registro)
-- [ ] Editar empresa externa
-- [ ] Deletar empresa externa
+  - [ ] Tabela
+  - [ ] Paginação na tabela
+  - [ ] Editar empresa externa
+  - [ ] Deletar empresa externa
 
 ---
 
 - [ ] Sobre a aplicação (Página com um texto falando como o projeto foi feito, sentimento, tecnologia usada, para que serve o sistema, etc)
-- [ ] Sair (Direciona para a página de **Login**)
+- [x] Sair (Direciona para a página de **Login**)
 - [ ] Compartilhar dados da tabela (Em relação a paginação, deve existir um mecanismo que ao compartilhar o link com outra pessoa, a pessoa deve ser redirecionada para a página específica da tabela. Exemplo: se ao compartilhar o link a paginação avançou até a página 3, ao entrar no link deve estar na página 3. Caso o usuário esteja logado, caso não, após o login ele deve ser redirecionado.)
 
 ## 🚀 Começando
