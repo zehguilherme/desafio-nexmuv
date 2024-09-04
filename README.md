@@ -11,7 +11,8 @@ O intuito é que possamos cadastrar os parceiros que temos integrados em nossas 
 - [ReactJS](https://react.dev/) - Biblioteca para construção de interfaces usando componentes
 - [TypeScript](https://www.typescriptlang.org/) - Conjunto de pacotes que adiciona tipagem estática à linguagem JavaScript
 - [React Router](https://reactrouter.com/en/main) - Gerenciamento de rotas da aplicação
-- [React Bootstrap](https://react-bootstrap.netlify.app)
+- [React Bootstrap](https://react-bootstrap.netlify.app) - Framework CSS para estilização
+- [React-Toastify](https://www.npmjs.com/package/react-toastify) - Componente de exibição de notificações
 
 ### Back-end
 
@@ -42,7 +43,7 @@ O intuito é que possamos cadastrar os parceiros que temos integrados em nossas 
 - [x] Criação do formulário (Campos **Usuário**, **Senha** e **Continuar Logado**)
 - [ ] Manter usuário conectado (Se o checkbox na tela de login for marcado deve salvar o usuário no cookie, se não, deve salvar no local storage)
 - [ ] Ao entrar na página, realizar a  busca do cookie contendo o nome do usuário
-- [ ] Ao clicar em entrar não precisa autenticar, só redirecionar para a página inicial
+- [x] Ao clicar em entrar não precisa autenticar, só redirecionar para a página inicial
 
 ### Página Inicial
 
