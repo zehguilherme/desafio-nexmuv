@@ -4,13 +4,13 @@ import { toast } from "react-toastify";
 
 import { Header } from "../components/Header";
 import { useEffect, useState } from "react";
-import { PartnersProps } from "../schemas/PartnersProps";
-import { ExternalCompanieProps } from "../schemas/ExternalCompanieProps";
+import { PartnerProps } from "../schemas/PartnerProps";
+import { ExternalCompanyProps } from "../schemas/ExternalCompanyProps";
 
 export function Home() {
-  const [partners, setPartners] = useState(Array<PartnersProps>);
+  const [partners, setPartners] = useState(Array<PartnerProps>);
   const [externalCompanies, setExternalCompanies] = useState(
-    Array<ExternalCompanieProps>
+    Array<ExternalCompanyProps>
   );
 
   function partnersLoadedError() {
@@ -34,7 +34,7 @@ export function Home() {
         },
       });
 
-      const partners: Array<PartnersProps> = await response.json();
+      const partners: Array<PartnerProps> = await response.json();
 
       setPartners(partners);
     } catch {
@@ -54,7 +54,7 @@ export function Home() {
         }
       );
 
-      const externalCompanies: Array<ExternalCompanieProps> =
+      const externalCompanies: Array<ExternalCompanyProps> =
         await response.json();
 
       setExternalCompanies(externalCompanies);
@@ -146,13 +146,13 @@ export function Home() {
               </thead>
 
               <tbody>
-                {externalCompanies.map((externalCompanie) => (
-                  <tr key={externalCompanie.id}>
-                    <td>{externalCompanie.companyName}</td>
+                {externalCompanies.map((externalCompany) => (
+                  <tr key={externalCompany.id}>
+                    <td>{externalCompany.companyName}</td>
 
-                    <td>{externalCompanie.collaboratorsCount}</td>
+                    <td>{externalCompany.collaboratorsCount}</td>
 
-                    <td>{externalCompanie.isActive ? "Sim" : "Não"}</td>
+                    <td>{externalCompany.isActive ? "Sim" : "Não"}</td>
 
                     <td>
                       <Button variant="secondary" type="button">
