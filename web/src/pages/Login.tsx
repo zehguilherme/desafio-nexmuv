@@ -14,7 +14,7 @@ export function Login() {
         <Form.Group className="mb-3" controlId="inputUsername">
           <Form.Label>Usuário</Form.Label>
 
-          <Form.Control type="text" />
+          <Form.Control type="text" autoFocus />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="inputPassword">
