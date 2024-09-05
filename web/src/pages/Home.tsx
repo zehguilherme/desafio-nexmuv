@@ -76,7 +76,7 @@ export function Home() {
       <Container className="py-4">
         <Row>
           <Col lg={6} className="mb-3">
-            <Link to={"#"} className="btn btn-primary mb-4">
+            <Link to={"/parceiro"} className="btn btn-primary mb-4">
               Cadastrar Parceiro
             </Link>
 
