@@ -6,13 +6,15 @@ import {
   Row,
   Spinner,
   Stack,
+  Tab,
   Table,
+  Tabs,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import { useEffect, useState } from "react";
 
 import { Header } from "../components/Header";
-import { useEffect, useState } from "react";
 import { PartnerProps } from "../schemas/PartnerProps";
 import { ExternalCompanyProps } from "../schemas/ExternalCompanyProps";
 
@@ -230,8 +232,12 @@ export function Home() {
       <Container className="py-4">
         <h1 className="visually-hidden">Home</h1>
 
-        <Row>
-          <Col lg={6} className="mb-3">
+        <Tabs
+          defaultActiveKey="partners"
+          id="uncontrolled-tab-example"
+          className="mb-3"
+        >
+          <Tab eventKey="partners" title="Parceiros">
             <Link to={"/parceiro"} className="btn btn-primary mb-4">
               Cadastrar Parceiro
             </Link>
@@ -326,9 +332,9 @@ export function Home() {
                 </tbody>
               </Table>
             )}
-          </Col>
+          </Tab>
 
-          <Col lg={6}>
+          <Tab eventKey="externalCompanies" title="Empresas Externas">
             <Link to={"#"} className="btn btn-primary mb-4">
               Cadastrar Empresa Externa
             </Link>
@@ -394,8 +400,8 @@ export function Home() {
                 </tbody>
               </Table>
             )}
-          </Col>
-        </Row>
+          </Tab>
+        </Tabs>
       </Container>
     </>
   );
