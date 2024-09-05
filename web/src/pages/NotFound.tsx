@@ -10,7 +10,7 @@ export function NotFound() {
       >
         <h1>Página não encontrada!</h1>
 
-        <Link to={""} className="btn btn-success">
+        <Link to={"/"} className="btn btn-success">
           Voltar para a Home
         </Link>
       </Stack>
