@@ -208,6 +208,8 @@ export function Home() {
       <Header />
 
       <Container className="py-4">
+        <h1 className="visually-hidden">Home</h1>
+
         <Row>
           <Col lg={6} className="mb-3">
             <Link to={"/parceiro"} className="btn btn-primary mb-4">
