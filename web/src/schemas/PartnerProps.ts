@@ -1,4 +1,4 @@
-export interface PartnersProps {
+export interface PartnerProps {
   createdAt: string;
   name: string;
   description: string;

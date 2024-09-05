@@ -1,4 +1,4 @@
-export interface ExternalCompanieProps {
+export interface ExternalCompanyProps {
   createdAt: string;
   companyName: string;
   collaboratorsCount: number;
