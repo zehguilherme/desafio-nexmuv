@@ -1,8 +1,17 @@
-import { Stack } from "react-bootstrap";
+import { FormEvent } from "react";
+import { Button, Stack } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function Login() {
+  const navigate = useNavigate();
+
+  function handleNavigateToLoginPage(event: FormEvent) {
+    event.preventDefault();
+
+    navigate("/");
+  }
+
   return (
     <Stack
       as={"main"}
@@ -10,7 +19,7 @@ export function Login() {
     >
       <h1 className="mb-3">Login</h1>
 
-      <Form>
+      <Form onSubmit={handleNavigateToLoginPage}>
         <Form.Group className="mb-3" controlId="inputUsername">
           <Form.Label>Usuário</Form.Label>
 
@@ -27,9 +36,9 @@ export function Login() {
           <Form.Check type="checkbox" label="Continuar logado" />
         </Form.Group>
 
-        <Link to={"/"} className="w-100 btn btn-primary">
+        <Button variant="primary" type="submit" className="w-100">
           Entrar
-        </Link>
+        </Button>
       </Form>
     </Stack>
   );
