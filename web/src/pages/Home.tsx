@@ -1,4 +1,4 @@
-import { Button, Col, Container, Row, Table } from "react-bootstrap";
+import { Badge, Button, Col, Container, Row, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 
@@ -91,6 +91,12 @@ export function Home() {
 
                   <th>Repositório Git</th>
 
+                  <th>URL Documento</th>
+
+                  <th>Clientes</th>
+
+                  <th>Projetos</th>
+
                   <th></th>
 
                   <th></th>
@@ -105,6 +111,32 @@ export function Home() {
                     <td>{partner.description}</td>
 
                     <td>{partner.repositoryGit}</td>
+
+                    <td>{partner.urlDoc}</td>
+
+                    <td>
+                      {partner.clients.map((client) => (
+                        <Badge
+                          key={`${client}-${Math.random()}`}
+                          bg="secondary"
+                          className="me-1"
+                        >
+                          {client}
+                        </Badge>
+                      ))}
+                    </td>
+
+                    <td>
+                      {partner.projects.map((project) => (
+                        <Badge
+                          key={`${project}-${Math.random()}`}
+                          bg="secondary"
+                          className="me-1"
+                        >
+                          {project}
+                        </Badge>
+                      ))}
+                    </td>
 
                     <td>
                       <Button variant="secondary" type="button">
