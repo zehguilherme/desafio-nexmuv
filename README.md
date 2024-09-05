@@ -54,6 +54,7 @@ Layout da aplicação com um menu e os itens.
 - [ ] Cadastrar parceiro
 - [ ] Listar todos os parceiros (Tabela com paginação e na última coluna ações para editar/deletar cada registro)
   - [x] Tabela
+  - [x] Adicionar spinner de carregamento das informações da tabela
   - [ ] Paginação na tabela
   - [ ] Editar parceiro
   - [x] Deletar parceiro
@@ -63,6 +64,7 @@ Layout da aplicação com um menu e os itens.
 - [ ] Cadastrar empresa externa
 - [ ] Listar as empresas externas (Tabela com paginação do lado do front e na última coluna ações para editar/deletar cada registro)
   - [x] Tabela
+  - [x] Adicionar spinner de carregamento das informações da tabela
   - [ ] Paginação na tabela
   - [ ] Editar empresa externa
   - [x] Deletar empresa externa

@@ -1,4 +1,13 @@
-import { Badge, Button, Col, Container, Row, Table } from "react-bootstrap";
+import {
+  Badge,
+  Button,
+  Col,
+  Container,
+  Row,
+  Spinner,
+  Stack,
+  Table,
+} from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 
@@ -12,6 +21,9 @@ export function Home() {
   const [externalCompanies, setExternalCompanies] = useState(
     Array<ExternalCompanyProps>
   );
+  const [isLoadingPartners, setIsLoadingPartners] = useState(true);
+  const [isLoadingExternalCompanies, setIsLoadingExternalCompanies] =
+    useState(true);
 
   function partnersLoadedError() {
     return toast(`Erro ao carregar os Parceiros!`, {
@@ -67,8 +79,12 @@ export function Home() {
       const partners: Array<PartnerProps> = await response.json();
 
       setPartners(partners);
+
+      setIsLoadingPartners(false);
     } catch {
       partnersLoadedError();
+
+      setIsLoadingPartners(false);
     }
   }
 
@@ -88,8 +104,12 @@ export function Home() {
         await response.json();
 
       setExternalCompanies(externalCompanies);
+
+      setIsLoadingExternalCompanies(false);
     } catch {
       externalCompaniesLoadedError();
+
+      setIsLoadingExternalCompanies(false);
     }
   }
 
@@ -218,83 +238,94 @@ export function Home() {
 
             <h2 className="mb-3">Parceiros</h2>
 
-            <Table striped bordered hover responsive className="align-middle">
-              <thead>
-                <tr>
-                  <th>Nome</th>
+            {isLoadingPartners ? (
+              <Stack
+                direction="horizontal"
+                className="justify-content-center align-items-center"
+              >
+                <Spinner animation="border" role="status">
+                  <span className="visually-hidden">Loading...</span>
+                </Spinner>
+              </Stack>
+            ) : (
+              <Table striped bordered hover responsive className="align-middle">
+                <thead>
+                  <tr>
+                    <th>Nome</th>
 
-                  <th>Descrição</th>
+                    <th>Descrição</th>
 
-                  <th>Repositório Git</th>
+                    <th>Repositório Git</th>
 
-                  <th>URL Documento</th>
+                    <th>URL Documento</th>
 
-                  <th>Clientes</th>
+                    <th>Clientes</th>
 
-                  <th>Projetos</th>
+                    <th>Projetos</th>
 
-                  <th></th>
+                    <th></th>
 
-                  <th></th>
-                </tr>
-              </thead>
-
-              <tbody>
-                {partners.map((partner) => (
-                  <tr key={partner.id}>
-                    <td>{partner.name}</td>
-
-                    <td>{partner.description}</td>
-
-                    <td>{partner.repositoryGit}</td>
-
-                    <td>{partner.urlDoc}</td>
-
-                    <td>
-                      {partner.clients.map((client) => (
-                        <Badge
-                          key={`${client}-${Math.random()}`}
-                          bg="secondary"
-                          className="me-1"
-                        >
-                          {client}
-                        </Badge>
-                      ))}
-                    </td>
-
-                    <td>
-                      {partner.projects.map((project) => (
-                        <Badge
-                          key={`${project}-${Math.random()}`}
-                          bg="secondary"
-                          className="me-1"
-                        >
-                          {project}
-                        </Badge>
-                      ))}
-                    </td>
-
-                    <td>
-                      <Button variant="secondary" type="button">
-                        Editar
-                      </Button>
-                    </td>
-
-                    <td>
-                      <Button
-                        variant="danger"
-                        type="button"
-                        onClick={() =>
-                          handleDeletePartner(partner.id, partner.name)
-                        }
-                      >
-                        Excluir
-                      </Button>
-                    </td>
+                    <th></th>
                   </tr>
-                ))}
-              </tbody>
-            </Table>
+                </thead>
+
+                <tbody>
+                  {partners.map((partner) => (
+                    <tr key={partner.id}>
+                      <td>{partner.name}</td>
+
+                      <td>{partner.description}</td>
+
+                      <td>{partner.repositoryGit}</td>
+
+                      <td>{partner.urlDoc}</td>
+
+                      <td>
+                        {partner.clients.map((client) => (
+                          <Badge
+                            key={`${client}-${Math.random()}`}
+                            bg="secondary"
+                            className="me-1"
+                          >
+                            {client}
+                          </Badge>
+                        ))}
+                      </td>
+
+                      <td>
+                        {partner.projects.map((project) => (
+                          <Badge
+                            key={`${project}-${Math.random()}`}
+                            bg="secondary"
+                            className="me-1"
+                          >
+                            {project}
+                          </Badge>
+                        ))}
+                      </td>
+
+                      <td>
+                        <Button variant="secondary" type="button">
+                          Editar
+                        </Button>
+                      </td>
+
+                      <td>
+                        <Button
+                          variant="danger"
+                          type="button"
+                          onClick={() =>
+                            handleDeletePartner(partner.id, partner.name)
+                          }
+                        >
+                          Excluir
+                        </Button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </Table>
+            )}
           </Col>
 
           <Col lg={6}>
@@ -304,54 +335,65 @@ export function Home() {
 
             <h2 className="mb-3">Empresas Externas</h2>
 
-            <Table striped bordered hover responsive className="align-middle">
-              <thead>
-                <tr>
-                  <th>Nome</th>
+            {isLoadingExternalCompanies ? (
+              <Stack
+                direction="horizontal"
+                className="justify-content-center align-items-center"
+              >
+                <Spinner animation="border" role="status">
+                  <span className="visually-hidden">Loading...</span>
+                </Spinner>
+              </Stack>
+            ) : (
+              <Table striped bordered hover responsive className="align-middle">
+                <thead>
+                  <tr>
+                    <th>Nome</th>
 
-                  <th>Número Colaboradores</th>
+                    <th>Número Colaboradores</th>
 
-                  <th>Ativa</th>
+                    <th>Ativa</th>
 
-                  <th></th>
+                    <th></th>
 
-                  <th></th>
-                </tr>
-              </thead>
-
-              <tbody>
-                {externalCompanies.map((externalCompany) => (
-                  <tr key={externalCompany.id}>
-                    <td>{externalCompany.companyName}</td>
-
-                    <td>{externalCompany.collaboratorsCount}</td>
-
-                    <td>{externalCompany.isActive ? "Sim" : "Não"}</td>
-
-                    <td>
-                      <Button variant="secondary" type="button">
-                        Editar
-                      </Button>
-                    </td>
-
-                    <td>
-                      <Button
-                        variant="danger"
-                        type="button"
-                        onClick={() =>
-                          handleDeleteExternalCompany(
-                            externalCompany.id,
-                            externalCompany.companyName
-                          )
-                        }
-                      >
-                        Excluir
-                      </Button>
-                    </td>
+                    <th></th>
                   </tr>
-                ))}
-              </tbody>
-            </Table>
+                </thead>
+
+                <tbody>
+                  {externalCompanies.map((externalCompany) => (
+                    <tr key={externalCompany.id}>
+                      <td>{externalCompany.companyName}</td>
+
+                      <td>{externalCompany.collaboratorsCount}</td>
+
+                      <td>{externalCompany.isActive ? "Sim" : "Não"}</td>
+
+                      <td>
+                        <Button variant="secondary" type="button">
+                          Editar
+                        </Button>
+                      </td>
+
+                      <td>
+                        <Button
+                          variant="danger"
+                          type="button"
+                          onClick={() =>
+                            handleDeleteExternalCompany(
+                              externalCompany.id,
+                              externalCompany.companyName
+                            )
+                          }
+                        >
+                          Excluir
+                        </Button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </Table>
+            )}
           </Col>
         </Row>
       </Container>
