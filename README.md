@@ -65,7 +65,7 @@ Layout da aplicação com um menu e os itens.
   - [x] Tabela
   - [ ] Paginação na tabela
   - [ ] Editar empresa externa
-  - [ ] Deletar empresa externa
+  - [x] Deletar empresa externa
 
 ---
 

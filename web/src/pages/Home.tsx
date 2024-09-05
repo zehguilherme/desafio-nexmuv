@@ -37,6 +37,24 @@ export function Home() {
     });
   }
 
+  function externalCompanyDeletedSuccessfully(externalCompanyName: string) {
+    return toast(
+      `Empresa externa "${externalCompanyName}" excluída com sucesso!`,
+      {
+        type: "success",
+      }
+    );
+  }
+
+  function externalCompanyNotDeleted(externalCompanyName: string) {
+    return toast(
+      `Erro ao excluir a empresa externa "${externalCompanyName}"!`,
+      {
+        type: "error",
+      }
+    );
+  }
+
   async function fetchPartners() {
     try {
       const response = await fetch(`${import.meta.env.VITE_PARTNERS_API_URL}`, {
@@ -119,6 +137,63 @@ export function Home() {
       }
     } catch {
       partnerNotDeleted(partnerName);
+    }
+  }
+
+  async function fetchExternalCompany(
+    externalCompanyId: string
+  ): Promise<string> {
+    const response = await fetch(
+      `${import.meta.env.VITE_EXTERNAL_COMPANIES_API_URL}/${externalCompanyId}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    const externalCompany: ExternalCompanyProps = await response.json();
+
+    const { id } = externalCompany;
+
+    return id;
+  }
+
+  async function deleteExternalCompany(externalCompanyId: string) {
+    await fetch(
+      `${import.meta.env.VITE_EXTERNAL_COMPANIES_API_URL}/${externalCompanyId}`,
+      {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+  }
+
+  async function handleDeleteExternalCompany(
+    externalCompanyId: string,
+    externalCompanyName: string
+  ) {
+    const externalCompanyDeleteIsConfirmed = confirm(
+      `Deseja realmente excluir a empresa externa "${externalCompanyName}"?`
+    );
+
+    try {
+      if (externalCompanyDeleteIsConfirmed) {
+        const responseExternalCompanyId = await fetchExternalCompany(
+          externalCompanyId
+        );
+
+        await deleteExternalCompany(responseExternalCompanyId);
+
+        externalCompanyDeletedSuccessfully(externalCompanyName);
+
+        await fetchExternalCompanies();
+      }
+    } catch {
+      externalCompanyNotDeleted(externalCompanyName);
     }
   }
 
@@ -258,7 +333,16 @@ export function Home() {
                     </td>
 
                     <td>
-                      <Button variant="danger" type="button">
+                      <Button
+                        variant="danger"
+                        type="button"
+                        onClick={() =>
+                          handleDeleteExternalCompany(
+                            externalCompany.id,
+                            externalCompany.companyName
+                          )
+                        }
+                      >
                         Excluir
                       </Button>
                     </td>
