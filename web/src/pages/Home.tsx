@@ -80,7 +80,7 @@ export function Home() {
               Cadastrar Parceiro
             </Link>
 
-            <h1 className="h2 mb-3">Parceiros</h1>
+            <h2 className="mb-3">Parceiros</h2>
 
             <Table striped bordered hover responsive className="align-middle">
               <thead>
@@ -128,7 +128,7 @@ export function Home() {
               Cadastrar Empresa Externa
             </Link>
 
-            <h1 className="h2 mb-3">Empresas Externas</h1>
+            <h2 className="mb-3">Empresas Externas</h2>
 
             <Table striped bordered hover responsive className="align-middle">
               <thead>
