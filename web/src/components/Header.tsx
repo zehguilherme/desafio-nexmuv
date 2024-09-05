@@ -18,7 +18,7 @@ export function Header() {
             </NavLink>
           </Nav>
 
-          <NavLink to={"login"} className="nav-link">
+          <NavLink to={"/login"} className="nav-link">
             Sair
           </NavLink>
         </Navbar.Collapse>
