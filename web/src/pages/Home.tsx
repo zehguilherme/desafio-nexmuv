@@ -25,6 +25,18 @@ export function Home() {
     });
   }
 
+  function partnerDeletedSuccessfully(partnerName: string) {
+    return toast(`Parceiro "${partnerName}" excluído com sucesso!`, {
+      type: "success",
+    });
+  }
+
+  function partnerNotDeleted(partnerName: string) {
+    return toast(`Erro ao excluir o parceiro "${partnerName}"!`, {
+      type: "error",
+    });
+  }
+
   async function fetchPartners() {
     try {
       const response = await fetch(`${import.meta.env.VITE_PARTNERS_API_URL}`, {
@@ -60,6 +72,53 @@ export function Home() {
       setExternalCompanies(externalCompanies);
     } catch {
       externalCompaniesLoadedError();
+    }
+  }
+
+  async function fetchPartner(partnerId: string): Promise<string> {
+    const response = await fetch(
+      `${import.meta.env.VITE_PARTNERS_API_URL}/${partnerId}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    const partners: PartnerProps = await response.json();
+
+    const { id } = partners;
+
+    return id;
+  }
+
+  async function deletePartner(partnerId: string) {
+    await fetch(`${import.meta.env.VITE_PARTNERS_API_URL}/${partnerId}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  }
+
+  async function handleDeletePartner(partnerId: string, partnerName: string) {
+    const partnerDeleteIsConfirmed = confirm(
+      `Deseja realmente excluir o parceiro "${partnerName}"?`
+    );
+
+    try {
+      if (partnerDeleteIsConfirmed) {
+        const responsePartnerId = await fetchPartner(partnerId);
+
+        await deletePartner(responsePartnerId);
+
+        partnerDeletedSuccessfully(partnerName);
+
+        await fetchPartners();
+      }
+    } catch {
+      partnerNotDeleted(partnerName);
     }
   }
 
@@ -145,7 +204,13 @@ export function Home() {
                     </td>
 
                     <td>
-                      <Button variant="danger" type="button">
+                      <Button
+                        variant="danger"
+                        type="button"
+                        onClick={() =>
+                          handleDeletePartner(partner.id, partner.name)
+                        }
+                      >
                         Excluir
                       </Button>
                     </td>
