@@ -56,7 +56,7 @@ Layout da aplicação com um menu e os itens.
   - [x] Tabela
   - [ ] Paginação na tabela
   - [ ] Editar parceiro
-  - [ ] Deletar parceiro
+  - [x] Deletar parceiro
 
 #### Empresa Externa
 
