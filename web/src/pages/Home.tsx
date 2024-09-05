@@ -1,9 +1,7 @@
 import {
   Badge,
   Button,
-  Col,
   Container,
-  Row,
   Spinner,
   Stack,
   Tab,
