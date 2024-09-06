@@ -33,7 +33,7 @@ O intuito deste projeto é que a Teddy possa cadastrar os parceiros que temos in
 
 ## ✅ TODO / TASKS
 
-- [ ] Deverá ser implementado um projeto com micro front-ends separados por domínios ou contextos de uso, permitindo assim, que diferentes times cuidem dessas funcionalidades de forma independente. (8h)
+- [ ] Deverá ser implementado um projeto com micro front-ends separados por domínios ou contextos de uso, permitindo assim, que diferentes times cuidem dessas funcionalidades de forma independente. (40h)
 - [ ] Preparar projeto em contêiner para que o time de infra consiga subir num cloud, exemplo ECS da AWS. (8h)
 - [x] Iniciar projeto com Vite
 
