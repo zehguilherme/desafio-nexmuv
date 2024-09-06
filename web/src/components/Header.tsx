@@ -6,7 +6,7 @@ export function Header() {
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
         <Link className="navbar-brand" to={"/"}>
-          Desafio Nexmuv
+          Teddy Open Finance
         </Link>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
