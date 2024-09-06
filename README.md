@@ -2,7 +2,7 @@
 
 ## 💬 Descrição
 
-O intuito deste projeto é que possamos cadastrar os parceiros que temos integrados em nossas aplicações, com informações deles, onde usamos e quais clientes atendemos.
+O intuito deste projeto é que a Teddy possa cadastrar os parceiros que temos integrados em nossas aplicações, com informações deles, onde usamos e quais clientes atendemos.
 
 ## 🚀 Tecnologias
 
