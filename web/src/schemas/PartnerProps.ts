@@ -4,7 +4,7 @@ export interface PartnerProps {
   description: string;
   repositoryGit: string;
   urlDoc: string;
-  clients: [];
-  projects: [];
+  clients: never[];
+  projects: never[];
   id: string;
 }
