@@ -53,6 +53,16 @@ export function ExternalCompanyEdit() {
 
     const externalCompany: ExternalCompanyProps = await response.json();
 
+    const lastSubmitDateObject = new Date(externalCompany.lastSubmit);
+
+    const year = lastSubmitDateObject.getFullYear();
+    const month = String(lastSubmitDateObject.getMonth() + 1).padStart(2, "0");
+    const day = String(lastSubmitDateObject.getDate()).padStart(2, "0");
+
+    const lastSubmitDateFormated = `${year}-${month}-${day}`;
+
+    externalCompany.lastSubmit = lastSubmitDateFormated;
+
     setExternalCompanyInformation(externalCompany);
   }
 
