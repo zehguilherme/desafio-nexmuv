@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export function NotFound() {
   return (
-    <Container className="vh-100">
+    <Container as={"main"} className="vh-100">
       <Stack
         gap={5}
         className="vh-100 justify-content-center align-items-center"
