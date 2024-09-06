@@ -124,9 +124,9 @@ export function Home() {
       }
     );
 
-    const partners: PartnerProps = await response.json();
+    const partner: PartnerProps = await response.json();
 
-    const { id } = partners;
+    const { id } = partner;
 
     return id;
   }
