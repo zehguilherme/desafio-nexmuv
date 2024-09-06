@@ -255,21 +255,21 @@ export function Home() {
               <Table striped bordered hover responsive className="align-middle">
                 <thead>
                   <tr>
-                    <th>Nome</th>
+                    <th className="align-middle">Nome</th>
 
-                    <th>Descrição</th>
+                    <th className="align-middle">Descrição</th>
 
-                    <th>Repositório Git</th>
+                    <th className="align-middle">Repositório Git</th>
 
-                    <th>URL Documento</th>
+                    <th className="align-middle">URL Documento</th>
 
-                    <th>Clientes</th>
+                    <th className="align-middle">Clientes</th>
 
-                    <th>Projetos</th>
+                    <th className="align-middle">Projetos</th>
 
-                    <th></th>
+                    <th className="align-middle"></th>
 
-                    <th></th>
+                    <th className="align-middle"></th>
                   </tr>
                 </thead>
 
@@ -308,7 +308,7 @@ export function Home() {
                         ))}
                       </td>
 
-                      <td>
+                      <td className="text-center">
                         <Link
                           to={`/parceiro/${partner.id}`}
                           className="btn btn-secondary"
@@ -317,7 +317,7 @@ export function Home() {
                         </Link>
                       </td>
 
-                      <td>
+                      <td className="text-center">
                         <Button
                           variant="danger"
                           type="button"
@@ -355,17 +355,17 @@ export function Home() {
               <Table striped bordered hover responsive className="align-middle">
                 <thead>
                   <tr>
-                    <th>Nome</th>
+                    <th className="align-middle">Nome</th>
 
-                    <th>Núm. Colaboradores</th>
+                    <th className="align-middle">Núm. Colaboradores</th>
 
-                    <th>Ativa</th>
+                    <th className="align-middle">Ativa</th>
 
-                    <th>Última Submissão</th>
+                    <th className="align-middle">Última Submissão</th>
 
-                    <th></th>
+                    <th className="align-middle"></th>
 
-                    <th></th>
+                    <th className="align-middle"></th>
                   </tr>
                 </thead>
 
@@ -390,7 +390,7 @@ export function Home() {
                         })}
                       </td>
 
-                      <td>
+                      <td className="text-center">
                         <Link
                           className="btn btn-secondary"
                           to={`/empresa-externa/${externalCompany.id}`}
@@ -399,7 +399,7 @@ export function Home() {
                         </Link>
                       </td>
 
-                      <td>
+                      <td className="text-center">
                         <Button
                           variant="danger"
                           type="button"
