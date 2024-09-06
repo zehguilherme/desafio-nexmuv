@@ -119,14 +119,7 @@ export function PartnerRegister() {
             }
           }}
         >
-          {({
-            handleSubmit,
-            handleChange,
-            handleBlur,
-            values,
-            touched,
-            errors,
-          }) => (
+          {({ handleSubmit, handleChange, values, errors }) => (
             <Form noValidate onSubmit={handleSubmit}>
               <Row>
                 <Col md={6}>
@@ -138,9 +131,8 @@ export function PartnerRegister() {
                       name="name"
                       autoFocus
                       value={values.name}
-                      isInvalid={touched.name && errors.name}
+                      isInvalid={!!errors.name}
                       onChange={handleChange}
-                      onBlur={handleBlur}
                     />
 
                     <Form.Control.Feedback type="invalid">
@@ -157,9 +149,8 @@ export function PartnerRegister() {
                       type="text"
                       name="description"
                       value={values.description}
-                      isInvalid={touched.description && errors.description}
+                      isInvalid={!!errors.description}
                       onChange={handleChange}
-                      onBlur={handleBlur}
                     />
 
                     <Form.Control.Feedback type="invalid">
@@ -175,12 +166,11 @@ export function PartnerRegister() {
                     <Form.Label>Repositório Git</Form.Label>
 
                     <Form.Control
-                      type="text"
+                      type="url"
                       name="gitRepository"
                       value={values.repositoryGit}
-                      isInvalid={touched.repositoryGit && errors.repositoryGit}
+                      isInvalid={!!errors.repositoryGit}
                       onChange={handleChange}
-                      onBlur={handleBlur}
                     />
 
                     <Form.Control.Feedback type="invalid">
@@ -197,9 +187,8 @@ export function PartnerRegister() {
                       type="url"
                       name="urlDoc"
                       value={values.urlDoc}
-                      isInvalid={touched.urlDoc && errors.urlDoc}
+                      isInvalid={!!errors.urlDoc}
                       onChange={handleChange}
-                      onBlur={handleBlur}
                     />
 
                     <Form.Control.Feedback type="invalid">
@@ -218,9 +207,8 @@ export function PartnerRegister() {
                     aria-describedby="inputClientsHelpBlock"
                     name="clients"
                     value={values.clients}
-                    isInvalid={touched.clients && errors.clients}
+                    isInvalid={!!errors.clients}
                     onChange={handleChange}
-                    onBlur={handleBlur}
                   />
 
                   <Form.Text id="inputClientsHelpBlock" muted>
@@ -242,9 +230,8 @@ export function PartnerRegister() {
                     aria-describedby="inputProjectsHelpBlock"
                     name="projects"
                     value={values.projects}
-                    isInvalid={touched.projects && errors.projects}
+                    isInvalid={!!errors.projects}
                     onChange={handleChange}
-                    onBlur={handleBlur}
                   />
 
                   <Form.Text id="inputProjectsHelpBlock" muted>
