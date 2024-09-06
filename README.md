@@ -1,8 +1,8 @@
-# Desafio Nexmuv
+# Desafio Teddy Open Finance
 
 ## 💬 Descrição
 
-O intuito é que possamos cadastrar os parceiros que temos integrados em nossas aplicações, com informações deles, onde usamos e quais clientes atendemos.
+O intuito deste projeto é que possamos cadastrar os parceiros que temos integrados em nossas aplicações, com informações deles, onde usamos e quais clientes atendemos.
 
 ## 🚀 Tecnologias
 
@@ -23,7 +23,7 @@ O intuito é que possamos cadastrar os parceiros que temos integrados em nossas 
 - [Parceiros](https://644060ba792fe886a88de1b9.mockapi.io/v1/test/partners)
 - [Empresas externas](https://655cf25525b76d9884fe3153.mockapi.io/v1/external-companies)
 
----
+##### Métodos
 
 - Listar tudo - `GET /`
 - Listar um por id - `GET /:id`
@@ -35,48 +35,49 @@ O intuito é que possamos cadastrar os parceiros que temos integrados em nossas 
 
 - [ ] Deverá ser implementado um projeto com micro front-ends separados por domínios ou contextos de uso, permitindo assim, que diferentes times cuidem dessas funcionalidades de forma independente
 - [ ] Preparar projeto em contêiner para que o time de infra consiga subir num cloud, exemplo ECS da AWS
-- [x] Iniciar com Vite
-- [ ] Testes automatizados
-  - [ ] Testes unitários
+- [x] Iniciar projeto com Vite
+
+### Testes automatizados
+
+- [ ] Testes unitários
+
+### Deploy
+
+- [x] Deploy do projeto na Vercel
 - [ ] Deploy do projeto no GitHub Pages
-- [x] Deploy na Vercel
 
 ### Página de Login
 
-- [x] Criação do formulário (Campos **Usuário**, **Senha** e **Continuar Logado**)
+- [x] Criação do formulário (Campos: **Usuário**, **Senha** e **Continuar Logado**)
 - [ ] Manter usuário conectado (Se o checkbox na tela de login for marcado deve salvar o usuário no cookie, se não, deve salvar no local storage)
 - [ ] Ao entrar na página, realizar a  busca do cookie contendo o nome do usuário
-- [x] Ao clicar em entrar não precisa autenticar, só redirecionar para a página inicial
+- [x] Ao clicar em entrar não precisa autenticar, só redirecionar para a página inicial (Home)
 
-### Página Inicial
+### Página Inicial (Home)
 
 Layout da aplicação com um menu e os itens.
 
+- [ ] Sobre a aplicação (Página com um texto falando como o projeto foi feito, sentimento, tecnologia usada, para que serve o sistema, etc)
+- [x] Sair (Direciona para a página de **Login**)
+- [ ] Compartilhar dados da tabela (Em relação a paginação, deve existir um mecanismo que ao compartilhar o link com outra pessoa, a pessoa deve ser redirecionada para a página específica da tabela. Exemplo: se ao compartilhar o link a paginação avançou até a página 3, ao entrar no link deve estar na página 3. Caso o usuário esteja logado, caso não, após o login ele deve ser redirecionado)
+
 #### Parceiro
 
-- [ ] Cadastrar parceiro
-- [ ] Listar todos os parceiros (Tabela com paginação e na última coluna ações para editar/deletar cada registro)
-  - [x] Tabela
-  - [x] Adicionar spinner de carregamento das informações da tabela
-  - [ ] Paginação na tabela
-  - [ ] Editar parceiro
-  - [x] Deletar parceiro
+- [x] Listar todos os itens
+- [ ] Cadastrar um item
+- [ ] Editar um item
+- [x] Deletar um item
+- [x] Adicionar spinner de carregamento das informações da tabela
+- [ ] Adicionar paginação na tabela
 
 #### Empresa Externa
 
-- [ ] Cadastrar empresa externa
-- [ ] Listar as empresas externas (Tabela com paginação do lado do front e na última coluna ações para editar/deletar cada registro)
-  - [x] Tabela
-  - [x] Adicionar spinner de carregamento das informações da tabela
-  - [ ] Paginação na tabela
-  - [ ] Editar empresa externa
-  - [x] Deletar empresa externa
-
----
-
-- [ ] Sobre a aplicação (Página com um texto falando como o projeto foi feito, sentimento, tecnologia usada, para que serve o sistema, etc)
-- [x] Sair (Direciona para a página de **Login**)
-- [ ] Compartilhar dados da tabela (Em relação a paginação, deve existir um mecanismo que ao compartilhar o link com outra pessoa, a pessoa deve ser redirecionada para a página específica da tabela. Exemplo: se ao compartilhar o link a paginação avançou até a página 3, ao entrar no link deve estar na página 3. Caso o usuário esteja logado, caso não, após o login ele deve ser redirecionado.)
+- [x] Listar todos os itens
+- [ ] Cadastrar um item
+- [ ] Editar um item
+- [x] Deletar um item
+- [x] Adicionar spinner de carregamento das informações da tabela
+- [ ] Adicionar paginação na tabela
 
 ## 🚀 Começando
 
