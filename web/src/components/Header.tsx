@@ -14,7 +14,7 @@ export function Header() {
 
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <NavLink to={"#"} className="nav-link active">
+              <NavLink to={"/sobre"} className="nav-link active">
                 Sobre
               </NavLink>
             </Nav>

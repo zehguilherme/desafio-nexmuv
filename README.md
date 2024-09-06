@@ -59,7 +59,7 @@ Layout da aplicação com um menu e os itens.
 
 #### Menu de Navegação
 
-- [ ] Sobre a aplicação (Página com um texto falando como o projeto foi feito, sentimento, tecnologia usada, para que serve o sistema, etc)
+- [x] Sobre a aplicação (Página com um texto falando como o projeto foi feito, sentimento, tecnologia usada, para que serve o sistema, etc)
 - [x] Sair (Direciona para a página de **Login**)
 
 #### Parceiro
