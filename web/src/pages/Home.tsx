@@ -309,9 +309,12 @@ export function Home() {
                       </td>
 
                       <td>
-                        <Button variant="secondary" type="button">
+                        <Link
+                          to={`/parceiro/${partner.id}`}
+                          className="btn btn-secondary"
+                        >
                           Editar
-                        </Button>
+                        </Link>
                       </td>
 
                       <td>
