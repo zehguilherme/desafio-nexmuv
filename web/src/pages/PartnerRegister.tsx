@@ -90,8 +90,6 @@ export function PartnerRegister() {
                 id: values.id,
               };
 
-              console.log(partnerData);
-
               const response = await fetch(
                 `${import.meta.env.VITE_PARTNERS_API_URL}`,
                 {
