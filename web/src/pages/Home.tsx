@@ -333,7 +333,7 @@ export function Home() {
           </Tab>
 
           <Tab eventKey="externalCompanies" title="Empresas Externas">
-            <Link to={"#"} className="btn btn-primary mb-4">
+            <Link to={"/empresa-externa"} className="btn btn-primary mb-4">
               Cadastrar Empresa Externa
             </Link>
 

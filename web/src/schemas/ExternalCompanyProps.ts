@@ -5,5 +5,4 @@ export interface ExternalCompanyProps {
   isActive: boolean;
   lastSubmit: string;
   id: string;
-  name: string;
 }

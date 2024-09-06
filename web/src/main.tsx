@@ -6,6 +6,7 @@ import { ToastContainer } from "react-toastify";
 import { Login } from "./pages/Login.tsx";
 import { Home } from "./pages/Home.tsx";
 import { PartnerRegister } from "./pages/PartnerRegister.tsx";
+import { ExternalCompanyRegister } from "./pages/ExternalCompanyRegister.tsx";
 import { NotFound } from "./pages/NotFound.tsx";
 
 import "react-toastify/dist/ReactToastify.min.css";
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: "/parceiro",
     element: <PartnerRegister />,
+  },
+  {
+    path: "/empresa-externa",
+    element: <ExternalCompanyRegister />,
   },
   {
     path: "*",
