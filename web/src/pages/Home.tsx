@@ -227,7 +227,7 @@ export function Home() {
     <>
       <Header />
 
-      <Container className="py-4">
+      <Container as={"main"} className="py-4">
         <h1 className="visually-hidden">Home</h1>
 
         <Tabs

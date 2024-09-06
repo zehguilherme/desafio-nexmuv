@@ -35,7 +35,7 @@ export function ExternalCompanyRegister() {
     <>
       <Header />
 
-      <Container className="py-4">
+      <Container as={"main"} className="py-4">
         <Link to={"/"} className="btn btn-secondary mb-4">
           Voltar
         </Link>
