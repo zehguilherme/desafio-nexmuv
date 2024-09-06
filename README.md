@@ -33,13 +33,13 @@ O intuito deste projeto é que a Teddy possa cadastrar os parceiros que temos in
 
 ## ✅ TODO / TASKS
 
-- [ ] Deverá ser implementado um projeto com micro front-ends separados por domínios ou contextos de uso, permitindo assim, que diferentes times cuidem dessas funcionalidades de forma independente
-- [ ] Preparar projeto em contêiner para que o time de infra consiga subir num cloud, exemplo ECS da AWS
+- [ ] Deverá ser implementado um projeto com micro front-ends separados por domínios ou contextos de uso, permitindo assim, que diferentes times cuidem dessas funcionalidades de forma independente. (8h)
+- [ ] Preparar projeto em contêiner para que o time de infra consiga subir num cloud, exemplo ECS da AWS. (8h)
 - [x] Iniciar projeto com Vite
 
 ### Testes automatizados
 
-- [ ] Testes unitários
+- [ ] Testes unitários (24h)
 
 ### Deploy
 
@@ -49,8 +49,8 @@ O intuito deste projeto é que a Teddy possa cadastrar os parceiros que temos in
 ### Página de Login
 
 - [x] Criação do formulário (Campos: **Usuário**, **Senha** e **Continuar Logado**)
-- [ ] Manter usuário conectado (Se o checkbox na tela de login for marcado deve salvar o usuário no cookie, se não, deve salvar no local storage)
-- [ ] Ao entrar na página, realizar a  busca do cookie contendo o nome do usuário
+- [ ] Manter usuário conectado (Se o checkbox na tela de login for marcado deve salvar o usuário no cookie, se não, deve salvar no local storage). (8h)
+- [ ] Ao entrar na página, realizar a  busca do cookie contendo o nome do usuário. (4h)
 - [x] Ao clicar em entrar não precisa autenticar, só redirecionar para a página inicial (Home)
 
 ### Página Inicial (Home)
@@ -65,22 +65,22 @@ Layout da aplicação com um menu e os itens.
 #### Parceiro
 
 - [x] Listar todos os itens
-- [ ] Cadastrar um item
-- [ ] Editar um item
+- [x] Cadastrar um item
+- [x] Editar um item
 - [x] Deletar um item
 - [x] Adicionar spinner de carregamento das informações da tabela
-- [ ] Adicionar paginação na tabela
-- [ ] Compartilhar dados da tabela (Em relação a paginação, deve existir um mecanismo que ao compartilhar o link com outra pessoa, a pessoa deve ser redirecionada para a página específica da tabela. Exemplo: se ao compartilhar o link a paginação avançou até a página 3, ao entrar no link deve estar na página 3. Caso o usuário esteja logado, caso não, após o login ele deve ser redirecionado)
+- [ ] Adicionar paginação na tabela. (8h)
+- [ ] Compartilhar dados da tabela (Em relação a paginação, deve existir um mecanismo que ao compartilhar o link com outra pessoa, a pessoa deve ser redirecionada para a página específica da tabela. Exemplo: se ao compartilhar o link a paginação avançou até a página 3, ao entrar no link deve estar na página 3. Caso o usuário esteja logado, caso não, após o login ele deve ser redirecionado). (8h)
 
 #### Empresa Externa
 
 - [x] Listar todos os itens
-- [ ] Cadastrar um item
-- [ ] Editar um item
+- [x] Cadastrar um item
+- [x] Editar um item
 - [x] Deletar um item
 - [x] Adicionar spinner de carregamento das informações da tabela
-- [ ] Adicionar paginação na tabela
-- [ ] Compartilhar dados da tabela (Em relação a paginação, deve existir um mecanismo que ao compartilhar o link com outra pessoa, a pessoa deve ser redirecionada para a página específica da tabela. Exemplo: se ao compartilhar o link a paginação avançou até a página 3, ao entrar no link deve estar na página 3. Caso o usuário esteja logado, caso não, após o login ele deve ser redirecionado)
+- [ ] Adicionar paginação na tabela. (8h)
+- [ ] Compartilhar dados da tabela (Em relação a paginação, deve existir um mecanismo que ao compartilhar o link com outra pessoa, a pessoa deve ser redirecionada para a página específica da tabela. Exemplo: se ao compartilhar o link a paginação avançou até a página 3, ao entrar no link deve estar na página 3. Caso o usuário esteja logado, caso não, após o login ele deve ser redirecionado). (8h)
 
 ## 🚀 Começando
 
