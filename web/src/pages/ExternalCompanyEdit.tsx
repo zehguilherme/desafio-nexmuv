@@ -23,8 +23,6 @@ export function ExternalCompanyEdit() {
 
   const { externalCompanyId } = useParams();
 
-  console.log(externalCompanyId);
-
   function externalCompanyNotUpdated() {
     return toast(`Erro ao editar as informações da empresa externa!`, {
       type: "error",
