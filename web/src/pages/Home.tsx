@@ -388,9 +388,12 @@ export function Home() {
                       </td>
 
                       <td>
-                        <Button variant="secondary" type="button">
+                        <Link
+                          className="btn btn-secondary"
+                          to={`/empresa-externa/${externalCompany.id}`}
+                        >
                           Editar
-                        </Button>
+                        </Link>
                       </td>
 
                       <td>

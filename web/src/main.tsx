@@ -7,6 +7,7 @@ import { Login } from "./pages/Login.tsx";
 import { Home } from "./pages/Home.tsx";
 import { PartnerRegister } from "./pages/PartnerRegister.tsx";
 import { ExternalCompanyRegister } from "./pages/ExternalCompanyRegister.tsx";
+import { ExternalCompanyEdit } from "./pages/ExternalCompanyEdit.tsx";
 import { About } from "./pages/About.tsx";
 import { NotFound } from "./pages/NotFound.tsx";
 
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
   {
     path: "/empresa-externa",
     element: <ExternalCompanyRegister />,
+  },
+  {
+    path: "/empresa-externa/:externalCompanyId",
+    element: <ExternalCompanyEdit />,
   },
   {
     path: "*",
