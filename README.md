@@ -13,6 +13,8 @@ O intuito é que possamos cadastrar os parceiros que temos integrados em nossas 
 - [React Router](https://reactrouter.com/en/main) - Gerenciamento de rotas da aplicação
 - [React Bootstrap](https://react-bootstrap.netlify.app) - Framework CSS para estilização
 - [React-Toastify](https://www.npmjs.com/package/react-toastify) - Componente de exibição de notificações
+- [Formik](https://formik.org/) - Biblioteca de gerenciamento de formulários
+- [Yup](https://github.com/jquense/yup) - Biblioteca para validação de esquemas e dados
 
 ### Back-end
 
@@ -25,16 +27,17 @@ O intuito é que possamos cadastrar os parceiros que temos integrados em nossas 
 
 - Listar tudo - `GET /`
 - Listar um por id - `GET /:id`
-- Cadastrar um parceiro - `POST - /`
-- Atualizar um parceiro - `PUT - /:id`
-- Deletar um parceiro - `DELETE - /:id`
+- Cadastrar um parceiro / empresa externa - `POST - /`
+- Atualizar um parceiro / empresa externa - `PUT - /:id`
+- Deletar um parceiro / empresa externa - `DELETE - /:id`
 
 ## ✅ TODO / TASKS
 
 - [ ] Deverá ser implementado um projeto com micro front-ends separados por domínios ou contextos de uso, permitindo assim, que diferentes times cuidem dessas funcionalidades de forma independente
 - [ ] Preparar projeto em contêiner para que o time de infra consiga subir num cloud, exemplo ECS da AWS
 - [x] Iniciar com Vite
-- [ ] Testes unitários
+- [ ] Testes automatizados
+  - [ ] Testes unitários
 - [ ] Deploy do projeto no GitHub Pages
 - [x] Deploy na Vercel
 

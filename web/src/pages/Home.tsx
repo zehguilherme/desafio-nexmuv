@@ -354,9 +354,11 @@ export function Home() {
                   <tr>
                     <th>Nome</th>
 
-                    <th>Número Colaboradores</th>
+                    <th>Núm. Colaboradores</th>
 
                     <th>Ativa</th>
+
+                    <th>Última Submissão</th>
 
                     <th></th>
 
@@ -372,6 +374,18 @@ export function Home() {
                       <td>{externalCompany.collaboratorsCount}</td>
 
                       <td>{externalCompany.isActive ? "Sim" : "Não"}</td>
+
+                      <td>
+                        {new Date(
+                          externalCompany.lastSubmit
+                        ).toLocaleDateString("pt-BR", {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                          hour: "numeric",
+                          minute: "numeric",
+                        })}
+                      </td>
 
                       <td>
                         <Button variant="secondary" type="button">
