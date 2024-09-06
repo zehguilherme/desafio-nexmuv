@@ -57,9 +57,10 @@ O intuito deste projeto é que possamos cadastrar os parceiros que temos integra
 
 Layout da aplicação com um menu e os itens.
 
+#### Menu de Navegação
+
 - [ ] Sobre a aplicação (Página com um texto falando como o projeto foi feito, sentimento, tecnologia usada, para que serve o sistema, etc)
 - [x] Sair (Direciona para a página de **Login**)
-- [ ] Compartilhar dados da tabela (Em relação a paginação, deve existir um mecanismo que ao compartilhar o link com outra pessoa, a pessoa deve ser redirecionada para a página específica da tabela. Exemplo: se ao compartilhar o link a paginação avançou até a página 3, ao entrar no link deve estar na página 3. Caso o usuário esteja logado, caso não, após o login ele deve ser redirecionado)
 
 #### Parceiro
 
@@ -69,6 +70,7 @@ Layout da aplicação com um menu e os itens.
 - [x] Deletar um item
 - [x] Adicionar spinner de carregamento das informações da tabela
 - [ ] Adicionar paginação na tabela
+- [ ] Compartilhar dados da tabela (Em relação a paginação, deve existir um mecanismo que ao compartilhar o link com outra pessoa, a pessoa deve ser redirecionada para a página específica da tabela. Exemplo: se ao compartilhar o link a paginação avançou até a página 3, ao entrar no link deve estar na página 3. Caso o usuário esteja logado, caso não, após o login ele deve ser redirecionado)
 
 #### Empresa Externa
 
@@ -78,6 +80,7 @@ Layout da aplicação com um menu e os itens.
 - [x] Deletar um item
 - [x] Adicionar spinner de carregamento das informações da tabela
 - [ ] Adicionar paginação na tabela
+- [ ] Compartilhar dados da tabela (Em relação a paginação, deve existir um mecanismo que ao compartilhar o link com outra pessoa, a pessoa deve ser redirecionada para a página específica da tabela. Exemplo: se ao compartilhar o link a paginação avançou até a página 3, ao entrar no link deve estar na página 3. Caso o usuário esteja logado, caso não, após o login ele deve ser redirecionado)
 
 ## 🚀 Começando
 
