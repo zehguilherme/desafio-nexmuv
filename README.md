@@ -87,7 +87,7 @@ Primeiro de tudo você precisa ter `node` e `npm` (ou `yarn`) instalados em sua 
 Então você pode clonar o repositório.
 
 ```code
-  git clone https://github.com/zehguilherme/desafio-nexmuv
+  git clone https://github.com/zehguilherme/desafio-teddy
 ```
 
 Inicie a aplicação
