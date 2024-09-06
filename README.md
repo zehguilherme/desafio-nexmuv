@@ -80,7 +80,12 @@ Layout da aplicação com um menu e os itens.
 
 ## 🚀 Começando
 
+### Iniciar o projeto localmente
+
 Primeiro de tudo você precisa ter `node` e `npm` (ou `yarn`) instalados em sua máquina.
+
+- [Download](https://nodejs.org/en/download/package-manager) do `node` e `npm`.
+- [Download](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable) do `yarn`.
 
 *Se você decidir usar o yarn não se esqueça de deletar `package-lock.json` nas pastas.*
 
@@ -95,3 +100,7 @@ Inicie a aplicação
 1. `cd web`
 2. `npm install` ou `yarn`
 3. `npm run dev` ou `yarn dev`
+
+### Abrir o projeto em produção
+
+Basta acessar esse [link](https://desafio-teddy.vercel.app/).
